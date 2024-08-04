@@ -100,14 +100,19 @@
     // 🧠 At each iteration of the loop, if the current character is not "x", then add it to the end of the result array.
     // 🧠 You can merge the result array back into a string by using join. Example: ["f", "o", "o"].join("") yields "foo"
     // 🧠 Do not forget to return your rejoined string!
+
     function stripX(str) {
-      let letters = str.split('')
-      let newStr = ''
-      for (letter of letters) {
-        newStr += (letter !== "x") ? letter : ''
-      }
-      return newStr
+      return str.split('').filter(letter => letter !== "x").join('')
     }
+
+    // function stripX(str) {
+    //   let letters = str.split('')
+    //   let newStr = ''
+    //   for (letter of letters) {
+    //     newStr += (letter !== "x") ? letter : ''
+    //   }
+    //   return newStr
+    // }
 
     // 👉 CHALLENGE 8
     // 🧠 The function stripChar takes a string as its first argument and a character as its second argument.
